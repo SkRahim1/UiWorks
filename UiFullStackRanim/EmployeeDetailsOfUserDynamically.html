@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>JavaScript Employee Details Dynamically</title>
+</head>
+
+<body>
+    <script>
+        console.log("Here is the Employee Details");
+        var eName = prompt("Enter your Name");
+        var Age = prompt("Enter your Age");
+        var bSalary = prompt("Enter your Basic Salary");
+        bSalary = parseInt(bSalary);
+        var PF = (bSalary * 14) / 100;
+        var HRF = (bSalary * 25) / 100;
+        var tSalary = bSalary + PF + HRF;
+        console.log("Your name is : " + eName);
+        console.log("Your age is : " + Age);
+        console.log("Your Basic Salary is : " + bSalary);
+
+        console.log("Your Total salay is : " + tSalary);
+    </script>
+
+</body>
+
+</html>
