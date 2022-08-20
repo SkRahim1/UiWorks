@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <script>
+       var n =0;
+        var reminder = 0;
+        var pallindrome = "";
+       
+        for (var i = 1000; i > 0; i--) {
+             n =i;
+             console.log(i);
+            while (n > 0) {
+                reminder = n % 10;
+                // console.log(reminder)
+                reminder = reminder.toString();
+                pallindrome += reminder;
+
+                n = n / 10;
+                n = parseInt(i);
+
+                // console.log("\n");
+            }
+            console.log(pallindrome);
+        
+            console.log(pallindrome + " is a reversed number");
+            pallindrome = parseInt(pallindrome);
+            //   console.log(pallindrome);
+            if (i == pallindrome) {
+                console.log(i);
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var EnteredNum = parseInt(prompt("Enter a number"));
+
+        var reminder = 0;
+        var str = " Reversed number is  ";
+
+        while (EnteredNum > 0) {
+            reminder = EnteredNum % 10;
+            console.log(reminder);
+            reminder = reminder.toString();
+            str += reminder;
+            reminder =parseInt(reminder);
+
+            EnteredNum = EnteredNum / 10;
+            EnteredNum = parseInt(EnteredNum);
+
+
+        }
+        console.log(str);
+    </script>
+</body>
+
+</html>

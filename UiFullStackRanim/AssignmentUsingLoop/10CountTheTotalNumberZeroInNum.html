@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<body>
+    <script>
+        var N = parseInt(prompt("Enter a number to count zeroes"));
+        var copy_N = N;
+        var Num_Zeroes = 0;
+        var rem = 0;
+        while (N > 0) {
+            rem = N % 10;
+            if (rem == 0) {
+                Num_Zeroes++;
+            }
+            N = N / 10;
+            N = parseInt(N);
+
+        }
+        console.log(Num_Zeroes + " zeros are in number " + copy_N );
+    </script>
+</body>
+
+</html>

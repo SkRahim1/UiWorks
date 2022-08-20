@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <h3>Demonstrating Do while See in console</h3>
+    <script>
+
+
+        var a = 0, b = 0, c = 0;
+        do {
+            var ent_num = prompt("11 -> write the correct datatype to increase score");
+            if (ent_num == "number" || ent_num == "Number" || ent_num == "NUMBER") {
+                console.log("You are right");
+                a++;
+            }
+            else {
+                console.log("You are wrong");
+                b++;
+            }
+            c++;
+
+        } while (c < 20);
+        console.log("your score is " + a + " from 20 attempts");
+    </script>
+</body>
+
+</html>

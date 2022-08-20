@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+         var EnteredNumber =   0    // parseInt(prompt("Enter a number "));
+        var rem = 0;
+        var ams = [];
+        // var copy_EnteredNumber = EnteredNumber;
+        for (var EnteredNumber1 = 1; EnteredNumber1 < 1000; EnteredNumber1++) {
+
+             EnteredNumber = EnteredNumber1;
+             
+
+            while (EnteredNumber > 0) {
+                rem = EnteredNumber % 10;
+
+                ams[EnteredNumber1] += rem * rem * rem;
+                EnteredNumber = EnteredNumber / 10;
+                EnteredNumber = parseInt(EnteredNumber);
+                console.log(rem);
+
+
+            }
+            console.log(ams);
+            if (ams[EnteredNumber1] == EnteredNumber1) {
+                console.log(ams[EnteredNumber1] + " is a Amstrong number");
+            }
+            else {
+                console.log(ams[EnteredNumber1] + " is not a Amstrong number");
+            }
+        }
+    </script>
+</body>
+
+</html>

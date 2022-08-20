@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <script>
+        for (var i = 1; i < 1000; i++) {
+            // console.log(i);
+            var n = i;
+            var power = n.length;
+            // console.log(power);
+            n = parseInt(n)
+            var temp = n;
+            var rem = 0;
+            var amstrongNum = 0;
+
+            while (n > 0) {
+
+                rem = n % 10;
+                amstrongNum += (rem ** power);
+                n = n / 10;
+                n = parseInt(n);
+
+            }
+            if (temp == amstrongNum) {
+                console.log("Given number is amstrong number");
+            }
+            // else {
+            //     console.log("Given number is not amstrong number");
+            // }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

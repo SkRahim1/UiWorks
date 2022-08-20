@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+    <script>
+        var EnteredNumber = parseInt(prompt("Enter a number to check it is pallindrome or not"))
+        console.log("Entered number is : " + EnteredNumber);
+        var reminder = 0;
+        var pallindrome = "";
+        var c_EnteredNumber = EnteredNumber;
+        while (EnteredNumber > 0) {
+            reminder = EnteredNumber % 10;
+            console.log(reminder)
+            reminder = reminder.toString();
+            pallindrome += reminder;
+            
+            EnteredNumber = EnteredNumber / 10;
+            EnteredNumber = parseInt(EnteredNumber);
+
+
+        }
+        console.log(pallindrome + " is a reversed number");
+        pallindrome =parseInt(pallindrome);
+          console.log(pallindrome);
+        if(c_EnteredNumber == pallindrome){
+            console.log(c_EnteredNumber + " is a pallindrome number");
+        }
+        else{
+            console.log(c_EnteredNumber + " is not a pallindrome number");
+
+        }
+
+
+    </script>
+</body>
+
+</html>

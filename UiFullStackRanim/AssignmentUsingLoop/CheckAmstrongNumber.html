@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <script>
+        var num = prompt("Enter a number ");
+        var power = num.length;
+        console.log(power);
+        num =parseInt(num)
+        var temp =num;
+        var rem = 0;
+        var amstrongNum = 0;
+
+        while (num > 0) {
+
+            rem = num % 10;
+            amstrongNum += (rem ** power);
+            num = num / 10;
+            num = parseInt(num);
+
+        }
+        if(temp == amstrongNum){
+            console.log("Given number is amstrong number");
+        }
+        else{
+            console.log("Given number is not amstrong number");
+        }
+
+    </script>
+
+</body>
+
+</html>

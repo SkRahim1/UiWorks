@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var EnteredNum = parseInt(prompt("Enter a number :"));
+        var c_EnteredNumber = EnteredNum;
+        var reminder = 0;
+        var ams = 0;
+
+        while (EnteredNum > 0) {
+            reminder = EnteredNum % 10;
+            // console.log(reminder);
+            reminder = parseInt(reminder);
+            ams += reminder * reminder * reminder;
+
+            EnteredNum = EnteredNum / 10;
+            EnteredNum = parseInt(EnteredNum);
+
+        }
+        //  console.log(ams);
+        if (ams == c_EnteredNumber) {
+            console.log(ams + "  is a Amstrong Number ");
+        }
+        else {
+            console.log("Given number is not Amstrong number.");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <script>
+        var EnteredNum = parseInt(prompt("Enter a number"));
+        rem = 0;
+        var totalDigit = 0;
+
+        while (EnteredNum > 0) {
+            rem = EnteredNum % 10;
+            EnteredNum = EnteredNum / 10;
+            EnteredNum =parseInt(EnteredNum);
+            totalDigit++;
+            console.log(rem);
+        }
+        console.log( "Total Digits are :  "+ totalDigit)
+
+    </script>
+</body>
+
+</html>
