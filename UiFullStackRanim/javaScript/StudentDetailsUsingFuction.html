@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <script>
+        var readData = () => {
+            var name, subject, totalMarks, average, temp;
+            name = prompt("Enter your name");
+            subjects = [];
+            for (var i = 0; i < 6; i++) {
+                subjects[i] = parseInt(prompt("Enter the value of subject " + i));
+            }
+            temp = avgAndTotal(subjects);
+            totalMarks = temp[0];
+            average = temp[1];
+            display(name, average, totalMarks);
+            finalResult(average);
+
+        }
+        var avgAndTotal = (arr) => {
+            var total = 0;
+            for (var i = 0; i < arr.length; i++) {
+                total += arr[i];
+            }
+            avg = total / arr.length;
+            return [total, avg];
+        }
+        var display = (name, avg, total) => {
+            console.log("Your name is  " + name);
+            console.log("Your average marks are " + avg);
+            console.log("Your total marks are " + total);
+
+        }
+        var finalResult = (avg) => {
+            if (avg > 45) {
+                console.log("You are passed");
+            }
+            else {
+                console.log("You are failed");
+            }
+        }
+        readData();
+
+    </script>
+</body>
+
+</html>
