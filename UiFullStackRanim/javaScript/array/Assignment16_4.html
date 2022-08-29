@@ -3,29 +3,48 @@
 
 <body>
     <script>
-        var array = [];
-        array[0] = parseInt(prompt("Enter first value"));
-        array[1] = parseInt(prompt("Enter second value"));
-        array[2] = parseInt(prompt("Enter third value"));
-        if (array[0] > array[1] && array[0] > array[2]) {
-            console.log("The first value " + array[0] +" is greates value");
-        }
-        else if (array[1] > array[0] && array[1] > array[2]) {
-            console.log("The second value " + array[1] +" is greates value");
-        }
-        else if (array[2] > array[0] && array[2] > array[1]) {
-            console.log("The third value " + array[2] +" is greates value");
-        }
+        // var array = [];
+        // array[0] = parseInt(prompt("Enter first value"));
+        // array[1] = parseInt(prompt("Enter second value"));
+        // array[2] = parseInt(prompt("Enter third value"));
+        // if (array[0] > array[1] && array[0] > array[2]) {
+        //     console.log("The first value " + array[0] +" is greates value");
+        // }
+        // else if (array[1] > array[0] && array[1] > array[2]) {
+        //     console.log("The second value " + array[1] +" is greates value");
+        // }
+        // else if (array[2] > array[0] && array[2] > array[1]) {
+        //     console.log("The third value " + array[2] +" is greates value");
+        // }
 
-        if (array[0] < array[1] && array[0] < array[2]) {
-            console.log("The first value " + array[0] +" is smallest value");
+        // if (array[0] < array[1] && array[0] < array[2]) {
+        //     console.log("The first value " + array[0] +" is smallest value");
+        // }
+        // else if (array[1] < array[0] && array[1] < array[2]) {
+        //     console.log("The second value " + array[1] +" is smallest value");
+        // }
+        // else if (array[2] < array[0] && array[2] < array[1]) {
+        //     console.log("The third value " + array[2] +" is smallest value");
+        // }
+
+    </script>
+    <script>
+        var array = [];
+        for(var i =0;i<5;i++){
+            array[i]=parseInt(prompt("Enter "+i+1+" value"));
         }
-        else if (array[1] < array[0] && array[1] < array[2]) {
-            console.log("The second value " + array[1] +" is smallest value");
+        for (var i = 0; i < array.length; i++) {
+            for (var j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    var temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+            // console.log(array[i]);
         }
-        else if (array[2] < array[0] && array[2] < array[1]) {
-            console.log("The third value " + array[2] +" is smallest value");
-        }
+        console.log(array[0]+ " is the smallest value in given array");
+        console.log(array[array.length-1]+ " is the largest value in given array");
 
     </script>
 

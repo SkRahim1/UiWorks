@@ -1,13 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <body>
-    <!-- find out the second largest number from given array  -->
     <script>
-        var array = [];
-        for (var i = 0; i < 5; i++) {
-            array[i] = parseInt(prompt("Enter " + (i+1) + " value"));
-        }
+        var array = [13, 12, 41, 21, 11, 64, 10, 90];
         for (var i = 0; i < array.length; i++) {
             for (var j = i + 1; j < array.length; j++) {
                 if (array[i] < array[j]) {
@@ -16,9 +11,8 @@
                     array[j] = temp;
                 }
             }
+            console.log(array[i]);
         }
-        console.log(array[1] + " is the second largest number");
-
     </script>
 </body>
 
