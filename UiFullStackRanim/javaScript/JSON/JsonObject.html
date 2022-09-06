@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+        var studentDetails = { name: "Rahim", id: 28, city: "Hyderabad", mNo: 1234521, marks: [32, 43, 52, 38] ,total:0,avg:0}
+        for(var i =0;i<4;i++){
+            studentDetails.total+=studentDetails.marks[i];
+        }
+        studentDetails.avg =studentDetails.total/studentDetails.marks.length;
+        console.log(studentDetails.name);
+        console.log("Your name is : "+studentDetails.name);
+        console.log("Your id is : "+studentDetails.id);
+        console.log("Your city is : "+studentDetails.city);
+        console.log("Your mobileNo is : "+studentDetails.mNo);
+        console.log("Your total marks is : "+studentDetails.total);
+        console.log("Your average marks is : "+studentDetails.avg);
+    </script>
 </body>
 </html>
