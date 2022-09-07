@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var details={name:"Rahim",lName:"Shaikh",Number:{Hnumber:123,Onumber:456}};
+        var showdetails =(details)=>{
+        for(var temp in details){
+            if(typeof(details[temp])=="object"){
+                showdetails(details[temp]);
+                console.log(details[temp]);
+            }
+            else{
+                console.log(temp);
+                console.log(details[temp]);
+            }
+        }
+    }
+    showdetails(details);
+    </script>
+</body>
+</html>
