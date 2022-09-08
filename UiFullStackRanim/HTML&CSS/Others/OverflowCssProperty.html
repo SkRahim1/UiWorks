@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        h1 {
+            text-align: center
+        }
+
+        .para_graph {
+            background-color: aliceblue !important;
+            border: 2px solid red ;
+            width: 110px;
+            height: 210px;
+            overflow: auto;
+            display: inline-flex;
+        }
+        #para_graph2{
+            overflow: hidden;
+            background-color: rgba(0, 255, 255, 0.565);
+             border: 2px solid rgb(144, 64, 64);
+        }
+        #para_graph3{
+            overflow: scroll;
+            background-color: rgba(73, 73, 154, 0.699);
+             border: 2px solid rgb(0, 162, 255);
+        }
+        #para_graph4{
+            overflow: visible;
+            background-color:rgba(128, 75, 78, 0.839);
+             border: 2px solid rgb(255, 0, 225);
+        }
+        #para_graph5{
+            overflow: clip;
+            background-color:bisque;
+             border: 2px solid rgb(17, 0, 255);
+        }
+        div{
+            text-align: center;
+            
+        }
+        /* h3{display: inline-block;} */
+    </style>
+</head>
+
+<body style="background-color: rgba(34, 23, 23, 0.601);">
+    <h1>Overflow Css Property</h1>
+    <div>
+        
+        <h3>Overflow : auto</h3>
+    <p class="para_graph" id="para_graph1">
+        The overflow property specifies what should happen if content overflows an element's box.This property specifies
+        whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.
+        Note: The overflow property only works for block elements with a specified height.
+    </p>
+    <h3>Overflow : hidden</h3>
+    <p class="para_graph" id="para_graph2">
+        The overflow property specifies what should happen if content overflows an element's box.This property specifies
+        whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.
+        Note: The overflow property only works for block elements with a specified height.
+    </p>
+    <h3>Overflow : scroll</h3>
+    <p class="para_graph" id="para_graph3">
+        The overflow property specifies what should happen if content overflows an element's box.This property specifies
+        whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.
+        Note: The overflow property only works for block elements with a specified height.
+    </p>
+    <h3>Overflow : visible</h3>
+    <p class="para_graph" id="para_graph4">
+        The overflow property specifies what should happen if content overflows an element's box.This property specifies
+        whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.
+        Note: The overflow property only works for block elements with a specified height.
+    </p>
+    <h3 >Overflow : clip</h3>
+    <p class="para_graph" id="para_graph5">
+        The overflow property specifies what should happen if content overflows an element's box.This property specifies
+        whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.
+        Note: The overflow property only works for block elements with a specified height.
+    </p>
+</div>
+
+</body>
+
+</html>
