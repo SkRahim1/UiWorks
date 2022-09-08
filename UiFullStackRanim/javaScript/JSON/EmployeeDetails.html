@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var empDetails = {
+            ReadData: function () {
+                this.ename = prompt("Enter your name");
+                this.gender = prompt("Enter your gender").toLowerCase();
+                this.eAge = prompt("Enter your age");
+                this.salary = parseInt(prompt("Enter your salary"));
+                this.getPfandHra();
+            },
+            getPfandHra: function () {
+                this.pf = (this.salary * 15) / 100;
+                this.hra = (this.salary * 25) / 100;
+                this.getTotal();
+            },
+            getTotal: function() {
+                this.total = this.salary + this.pf + this.hra;
+                this.taxTobePaid();
+            },
+            taxTobePaid: function () {
+                this.tax = 0;
+                if (this.gender == "male") {
+                    if (this.total >= 200000) {
+                        this.tax = 15;
+                    }
+                    else if (this.total >= 100000) {
+                        this.tax = 10;
+                    }
+                    else if (this.total >= 50000) {
+                        this.tax = 5;
+                    }
+                } else {
+                    if (this.total >= 200000) {
+                        this.tax = 10;
+                    }
+                    else if (this.total >= 100000) {
+                        this.tax = 5;
+                    }
+
+                }
+                this.display();
+            },
+            display: function () {
+                console.log("your Name is " + this.ename);
+                console.log("your age is " + this.eAge);
+                console.log("your gender is " + this.gender);
+                console.log("your payable tax is " + (this.total * this.tax) / 100);
+            }
+        }
+        empDetails.ReadData();
+   // console.log(empDetails);
+    </script>
+</body>
+
+</html>
