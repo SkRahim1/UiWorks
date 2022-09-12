@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Creating Elements using Through JavaScript</title>
+</head>
+<body>
+    <script>
+        var x = 50;
+        var rh = document.createElement("p");
+        rh.setAttribute("id","hello");
+        rh.setAttribute("class","hi");
+        document.querySelector("body").append(rh);
+        document.getElementById("hello").innerHTML="What are you doing";
+        console.log(document);
+        rh.style.background="red";
+        rh.style.fontSize="20px"
+       // console.log(rh);
+    </script>
+</body>
+</html>

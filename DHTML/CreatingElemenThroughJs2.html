@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>creating dynamic webpage using javascript</title>
+</head>
+<body>
+    <script>
+        var student =prompt("What is your name");
+        var x =document.createElement("div");
+        document.querySelector("body").append(x);
+        document.querySelector("div").innerHTML="Your name is "+student;
+        x.style.color="red";
+        x.style.background="blue";
+    </script>
+</body>
+</html>

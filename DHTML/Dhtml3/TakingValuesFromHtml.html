@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .main{
+            margin:auto;
+            text-align: center;
+            padding:100px;
+        }
+        ul{
+            margin:auto;
+        list-style: none;    
+        text-align: center;
+        }
+        li{
+            border:1px solid;
+            width:400px;
+            height:30px;
+            padding: 10px;
+        }
+        #specialLi{
+            display:none;
+        } 
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <ul>
+            <li>
+                First value: <input id ="in1" type="text">
+            </li>
+            <li>
+                Second value: <input id ="in2" type="text">
+            </li>
+
+            <li id="specialLi">
+                Result = <span id="result"></span>
+            </li>
+            <li>
+               <button onclick="calculate();">Submit</button>
+               <button onclick="reload();">Reload</button>
+            </li>
+        </ul>
+    </div>
+    <script>
+        f
+        function calculate (){
+var x =document.querySelector("#in1").value;
+x=parseInt(x);
+var y =document.querySelector("#in2").value;
+y=parseInt(y);
+var result=x+y;
+document.querySelector("#result").innerHTML=result;
+document.querySelector("#specialLi").style.display="block";
+document.querySelector("#in1").value="";
+document.querySelector("#in2").value="";
+
+}
+function reload (){
+    location.reload();
+}
+    </script>
+</body>
+</html>
