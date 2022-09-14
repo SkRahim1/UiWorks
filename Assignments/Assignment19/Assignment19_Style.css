@@ -1,14 +1,28 @@
+.Title{
+    border:2px solid;
+    border-radius: 5px;
+    text-align: center;
+    margin: 3px auto;
+    width:400px;
+    height:25px;
+    padding-top:3px;
+    background-color: antiquewhite;
+}
 .InputUl li{
     margin:10px;
     border:2px solid rgba(42, 40, 40, 0.7);
+    border-radius: 5px;
     padding: 3px;
+    background-color: rgba(127, 255, 212, 0.705);
 }
 .main ul{
     margin: auto;
     list-style: none;
     padding: 0;
     border:2px solid;
+    border-radius: 13px;
     width:400px;
+    background-color: rgb(70, 201, 201);
 }
 .name{
     margin-left:70px;
@@ -46,3 +60,6 @@
 .displayDetails{
     display:none;
 }
+ /* li input{
+width:50px;
+} */
