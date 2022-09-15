@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <style>
+        .main{
+            height:100px;
+        }
+    </style> -->
+    <title>Document</title>
+</head>
+<body>
+   <div class="main" onmouseover="happen();"></div> 
+   <script>
+    document.querySelector(".main").style.border="2px solid";
+    document.querySelector(".main").style.height="100px";
+    document.querySelector(".main").style.width="100px";
+    var happen=()=>{
+        console.log("you are hovering on block");
+    document.querySelector(".main").addEventListener("click",()=>{
+        console.log("Event is added");
+    });
+}
+   </script>
+</body>
+</html>

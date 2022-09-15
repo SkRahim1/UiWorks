@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .main{
+        border:2px solid red;
+        width:200px;
+        height:200px;
+        background-color: black;
+        }
+        .sub{
+            width:50px;
+            height:50px;
+            background-color: blue;
+            margin:auto;
+            margin-top:30%;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+   <div class="main">
+<div class="sub">
+</div>
+   </div> 
+   <script>
+    document.querySelector(".main").addEventListener("click",()=>{
+        console.log("Parent got envoked");
+    },true);
+    document.querySelector(".sub").addEventListener("click",()=>{
+        console.log("Child got envoked");
+    },true)
+   </script>
+</body>
+</html>

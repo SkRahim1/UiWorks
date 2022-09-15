@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+.block1,.block2{
+    border:2px solid;
+    width: 200px;
+    height:200px;
+    margin:5px;
+    float:left;
+    background-color: red;
+}
+.block11{
+    border:1px solid;
+    width: 200px;
+    height:200px;
+    margin:5px;
+    float:left;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="block1" id="block1" onclick="classAdder();"></div>
+        <div class="block2"></div>
+    </div>
+    <script>
+        var i =0;
+        var classAdder =()=>{
+            document.querySelector("#block1").classList.add("block11");
+            document.querySelector("#block1").classList.remove("block1");
+            i++;
+            console.log(i);
+            if(i%2==0){
+                classRestor();
+            }
+        }
+        var classRestor=()=>{
+            document.querySelector("#block1").classList.add("block1");
+            document.querySelector("#block1").classList.remove("block11");
+        }
+    </script>
+</body>
+</html>
