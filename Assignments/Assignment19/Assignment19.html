@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="Assignment19_Style.css">
 </head>
+
 <body>
     <div class="Title">Employee Pay Sleep</div>
     <div class="main">
@@ -16,7 +18,7 @@
             </li>
             <li class="l3">
                 Enter Gender: <input type="radio" class="gender" name="gender" value="male" checked>Male
-                <input type="radio"  name="gender" value="female">Female
+                <input type="radio" name="gender" value="female">Female
             </li>
             <li class="l4">
                 Enter Department: <input type="text" class="department">
@@ -25,14 +27,15 @@
                 Enter BasicSalary: <input type="text" class="bsalary">
             </li>
             <li class="l6">
-                 <input type="submit" class="submit" onclick="EmployeeDetails.getData();" onclick="setData()">
-                 <input type="button" class="submit"value="Reload" onclick="EmployeeDetails.reload();">
-                 <input type="button" value="print" onclick="EmployeeDetails.print();">
+                <input type="submit" class="submit" onclick="EmployeeDetails.getData();" onclick="setData()">
+                <input type="button" class="submit" value="Reload" onclick="EmployeeDetails.reload();">
+                <input type="button" value="print" onclick="EmployeeDetails.print();">
             </li>
         </ul>
     </div>
     <div class="displayDetails">
         <ul class="displayUl">
+            <li class="paySleep" id="paySleep">PAY SLEEP</li>
             <li>
                 Your Name is : <span class="dname"></span>
             </li>
@@ -55,4 +58,5 @@
     </div>
     <script src="Assignment19_Js.js"></script>
 </body>
+
 </html>

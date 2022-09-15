@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .main {
+            border: 1px solid;
+            padding: 5px;
+            width: 400px;
+            margin: auto;
+        }
+
+        div div {
+            margin: 5px;
+        }
+
+        .thirdDiv {
+            text-align: center;
+        }
+
+        .firstValue {
+            margin-left: 38px;
+        }
+
+        .secondValue {
+            margin-left: 19px;
+        }
+
+        input {
+            max-width: 90px;
+        }
+
+        .display {
+            display: none;
+        }
+
+        .error2,
+        .error1 {
+            font-size: 8px;
+            color: red;
+            padding-left: 164px;
+            display: none;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="firstDiv">
+            Enter first value: <input type="text" class="firstValue" onkeypress="return validatePage(event,'.error1');">
+            <br><span class="error1">Numbers allowed only</span>
+        </div>
+        <div class="secondDiv">
+            Enter second value: <input type="text" class="secondValue"
+                onkeypress="return validatePage(event,'.error2');">
+            <br><span class="error2">Numbers allowed only</span>
+        </div>
+        <div class="display">
+            Result: <span class="displayResult"></span>
+        </div>
+        <div class="thirdDiv">
+            <input type="submit" class="submit" onclick="validate();">
+            <button onclick="reload();">Reload</button>
+        </div>
+    </div>
+    <script>
+        var validatePage = (event, className) => {
+            validateError(event, className);
+            //  console.log(event);
+            if (event.keyCode >= 49 && event.keyCode <= 57) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var validate = () => {
+            var val1 = parseInt(document.querySelector(".firstValue").value);
+            var val2 = parseInt(document.querySelector(".secondValue").value);
+            var result = val1 + val2;
+            console.log(result);
+            document.querySelector(".displayResult").innerHTML = result;
+            document.querySelector(".display").style.display = "block";
+
+        }
+        var validateError = (event, className) => {
+            // console.log(event);
+            if (event.keyCode >= 48 && event.keyCode <= 57) {
+                document.querySelector(className).style.display = "none";
+            }
+            else {
+                document.querySelector(className).style.display = "block";
+            }
+        }
+        var reload=()=>{
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>
