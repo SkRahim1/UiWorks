@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .heading {
+            margin: auto;
+            width: 300px;
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: italic;
+            font-weight: bolder;
+            background-color: aqua;
+        }
+
+        .main {
+            border: 1px solid;
+            width: 300px;
+            height: 196px;
+            margin: 5px auto;
+            background-color: rgba(127, 255, 212, 0.647);
+        }
+
+        input {
+            max-width: 80px;
+        }
+
+        div div {
+            border: 1px solid;
+            padding: 3px;
+            margin: 3px;
+            background-color: rgba(240, 248, 255, 0.685);
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        button {
+            background-color: rgba(0, 0, 255, 0.398);
+        }
+
+        .sub {
+            margin: 2px;
+            max-width: 30px;
+        }
+
+        .displayDetails div {
+            width: 300px;
+            margin: auto;
+        }
+
+        .displayDetails {
+            display: none;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="heading"> Student Details</div>
+    <div class="main">
+        <div class="name">
+            Enter your Name: <input type="text" id="name">
+        </div>
+        <div class="number">
+            Enter your Number: <input type="text" id="num">
+        </div>
+        <div class="branch">
+            Enter your branch: <input type="text" id="branch">
+        </div>
+        <div class="marks">
+            Enter your marks: <input type="text" class="sub1 sub">
+            <input type="text" class="sub2 sub">
+            <input type="text" class="sub3 sub">
+            <input type="text" class="sub4 sub">
+            <input type="text" class="sub5 sub">
+        </div>
+        <div class="button">
+            <button onclick="ob.validateData();">show</button>
+            <button onclick="ob.clear();">clear</button>
+        </div>
+    </div>
+    <div class="displayDetails">
+        <div class="college">
+            College Name: <span id="college"></span>
+        </div>
+        <div class="dname">
+            your Name is: <span id="dname"></span>
+        </div>
+        <div class="dnumber">
+            your Number is: <span id="dnumber"></span>
+        </div>
+        <div class="dbranch">
+            your branch is: <span id="dbranch"></span>
+        </div>
+        <div class="dmarks">
+            Total marks: <span id="dmarks"></span>
+        </div>
+       
+    </div>
+    <script>
+        class SchoolDetails{
+            schoolName="New Science College";
+        }
+        class Validation extends SchoolDetails{
+            count=0;
+            validateData = () => {
+                document.querySelector(".displayDetails").style.display = "block";
+                this.name = document.querySelector("#name").value;
+                document.querySelector("#dname").innerHTML = this.name;
+                this.number = document.querySelector("#num").value;
+                document.querySelector("#dnumber").innerHTML = this.number;
+                this.branch = document.querySelector("#branch").value;
+                document.querySelector("#dbranch").innerHTML = this.branch;
+                this.sub1 = parseInt(document.querySelector(".sub1").value);
+                this.sub2 = parseInt(document.querySelector(".sub2").value);
+                this.sub3 = parseInt(document.querySelector(".sub3").value);
+                this.sub4 = parseInt(document.querySelector(".sub4").value);
+                this.sub5 = parseInt(document.querySelector(".sub5").value);
+                this.total = this.sub1 + this.sub2 + this.sub3 + this.sub4 + this.sub5;
+                document.querySelector("#dmarks").innerHTML = this.total;
+                document.querySelector("#college").innerHTML = this.schoolName;
+               // ob.clear();
+            }
+            clear(){
+                document.querySelector("#name").value="";
+                document.querySelector("#num").value="";
+                document.querySelector("#branch").value="";
+                document.querySelector(".sub1").value="";
+                document.querySelector(".sub2").value="";
+                document.querySelector(".sub3").value="";
+                document.querySelector(".sub4").value="";
+                document.querySelector(".sub5").value="";
+
+                }
+            }
+        
+        var ob =new Validation();
+    </script>
+</body>
+
+</html>
