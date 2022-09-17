@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .main{
+           /* border:1px solid;*/
+            width:200px;
+            height:200px;
+            overflow:auto;
+            margin:auto;
+        }
+        ul{padding:0;
+            list-style: none;
+        }
+        ul li{
+            border:1px solid;
+            padding:3px;
+        }
+        input{
+            width:70px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main"><ul>
+        <li class="1">
+            Enter name: <input type="text" class="name">
+        </li>
+        <li class="2">
+            Enter Id: <input type="text" class="id">
+        </li>
+        <li class="3">
+            Enter RollNo: <input type="text" class="rollNo">
+        </li>
+        <li class="4">
+            <button onclick="ob.validation()">submit</button>
+        </li>
+    </ul></div>
+    <script>
+        class ValidateData {
+            validation(){
+                this.name=document.querySelector(".name").value;
+                console.log(this.name);
+            }
+        }
+        var ob = new ValidateData();
+        ob.validation();
+       // console.log(ob);
+    </script>
+</body>
+</html>

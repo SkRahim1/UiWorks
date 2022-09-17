@@ -1,0 +1,22 @@
+var validate={
+    fun1(){
+        this.num1=1;
+        document.querySelector(".displayResult").innerHTML=this.num1;
+    },
+    fun2(){
+        this.num2=2;
+        document.querySelector(".displayResult").innerHTML=this.num2;
+    },
+    fun3(){
+        this.num3=3;
+        document.querySelector(".displayResult").innerHTML=this.num3;
+    },
+    fun4(){
+        this.num4=4;
+        document.querySelector(".displayResult").innerHTML=this.num4;
+    },
+    fun5(){
+        this.num5=5;
+        document.querySelector(".displayResult").innerHTML=this.num5;
+    }
+}
