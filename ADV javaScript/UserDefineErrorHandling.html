@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container{
+            margin:auto;
+            border:2px solid;
+            width:300px;
+            height:200px;
+            padding: 10px;
+        }
+        .butSumbit{
+            margin:20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <label for="value1">value1</label>
+        <input class="in1" type="text">
+        <br>
+        <br>
+        <label for="value1">value2</label>
+        <input class="in2" type="text">
+        <br>
+        <button class="butSumbit" onclick="calculate();">submit</button>
+        <div class="result">Result <span class="sum"></span></div>
+    </div>
+    <script>
+      var calculate=()=>{
+        try{
+        var x =parseInt(document.querySelector(".in1").value);
+        var y =parseInt(document.querySelector(".in2").value);
+        var sum = x+y;
+        if(x==NaN || y==NaN)
+        {throw "Empty"}
+        document.querySelector(".sum").innerHTML=sum;
+    }catch(error){
+        switch(error){
+            case "Empty":{
+                console.log("please enter some value");
+            }
+        }
+    }
+      }
+    </script>
+</body>
+</html>

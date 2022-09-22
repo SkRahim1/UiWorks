@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x =22; //has global scope
+        const h=43; //value cannot be changed 
+        function y(){
+            console.log(x);
+            var w=22; //has module scope in function
+        }
+        if(true){
+            
+            let w =23; //let has block scope
+        }
+        y();
+     //   console.log(w); not accessable outside the block 
+        console.log(h);
+    </script>
+</body>
+</html>

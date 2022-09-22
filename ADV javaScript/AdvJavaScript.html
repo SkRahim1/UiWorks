@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .sp1,
+    .in1,
+    .sp2,
+    .sp3,
+    .in2 {
+        margin: 5px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstrating Closure in javaScript</title>
+</head>
+
+<body>
+    <div style="border:2px solid; width:300px; height:110px;" class="container">
+        <script>
+            var span1 = document.createElement("span");
+            document.querySelector(".container").append(span1);
+            span1.setAttribute("class", "sp1");
+            document.querySelector(".sp1").innerHTML = "First Value";
+            var input1 = document.createElement("input");
+            document.querySelector(".container").append(input1);
+            console.log(input1);
+            input1.setAttribute("class", "in1");
+            document.write("<br>");
+            var span2 = document.createElement("span");
+            document.querySelector(".container").append(span2);
+            span2.setAttribute("class", "sp2");
+            span2.innerText = "Second value";
+            var input2 = document.createElement("input");
+            document.querySelector(".container").append(input2);
+            input2.setAttribute("class", "in2");
+            var button = document.createElement("button");
+            document.querySelector(".container").append(button);
+            button.setAttribute("value", "submit");
+            button.innerHTML = "submit";
+            button.addEventListener("click", calculate);
+            button.style.marginLeft = "50px";
+          
+            function calculate() {
+                console.log("Calculate method Invoked");
+                try{
+                var x = parseInt(document.querySelector(".in1").value);
+                var y = parseInt(document.querySelector(".in2").value);
+                var sum = x + y;
+                var span3 = document.createElement("span");
+                document.querySelector(".container").append(span3);
+                span3.setAttribute("class", "sp3");
+                span3.style.marginLeft= "50px";
+             //   document.write("<br>");
+                document.querySelector(".sp3").innerHTML ="<br>"+"sum = "+ sum;
+            }catch(er){
+                console.log(er);
+                console.log("User Error");
+            }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
