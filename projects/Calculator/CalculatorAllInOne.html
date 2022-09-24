@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading{
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-style: italic;
+            font-size: large;
+            margin-bottom:5px;
+        }
+        .main{
+            margin:auto;
+            text-align: center;
+  
+        }
+        button{
+            padding:10px;
+            width:43px;
+            border:1px solid;
+            border-radius:9px;
+            margin:3px;
+        }
+        input{
+            padding:4px;
+            margin:2px;
+            width:194px;
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">Calculator By Rahim</div>
+    <div class="main">
+        <div class="row"><input type="text"></div>
+        <div class="row">
+            <button class="Button">7</button>
+            <button class="Button">8</button>
+            <button class="Button">9</button>
+            <button class="Button">+</button>
+        </div>
+        <div class="row">
+            <button class="Button">4</button>
+            <button class="Button">5</button>
+            <button class="Button">6</button>
+            <button class="Button">-</button>
+        </div>
+        <div class="row">
+            <button class="Button">1</button>
+            <button class="Button">2</button>
+            <button class="Button">3</button>
+            <button class="Button">/</button>
+        </div>
+        <div class="row">
+            <button class="Button">0</button>
+            <button class="Button">c</button>
+            <button class="Button">*</button>
+            <button class="Button">=</button>
+        </div>
+    </div>
+    <script>
+        var String="";
+var values =document.querySelectorAll(".Button");
+// values.addEventListner("click",(e)=>{
+//    // document.querySelector("input").value=String;
+//    console.log(e);
+// })
+values.forEach((button)=>{
+    button.addEventListener("click",(e)=>{
+        if(e.target.innerHTML=="="){
+            String = eval(String);
+            document.querySelector("input").value=String;
+        }else if(e.target.innerHTML=="c"){
+            String="";
+            document.querySelector("input").value="";
+        }
+        else{
+        String+=e.target.innerHTML;
+        document.querySelector("input").value=String;
+        console.log(e.target.innerHTML);
+    }
+    })
+})
+console.log(values);
+    </script>
+</body>
+</html>

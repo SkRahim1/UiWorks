@@ -1,22 +1,23 @@
-var validate={
-    fun1(){
-        this.num1=1;
-        document.querySelector(".displayResult").innerHTML=this.num1;
-    },
-    fun2(){
-        this.num2=2;
-        document.querySelector(".displayResult").innerHTML=this.num2;
-    },
-    fun3(){
-        this.num3=3;
-        document.querySelector(".displayResult").innerHTML=this.num3;
-    },
-    fun4(){
-        this.num4=4;
-        document.querySelector(".displayResult").innerHTML=this.num4;
-    },
-    fun5(){
-        this.num5=5;
-        document.querySelector(".displayResult").innerHTML=this.num5;
+var String="";
+var values =document.querySelectorAll(".Button");
+// values.addEventListner("click",(e)=>{
+//    // document.querySelector("input").value=String;
+//    console.log(e);
+// })
+values.forEach((button)=>{
+    button.addEventListener("click",(e)=>{
+        if(e.target.innerHTML=="="){
+            String = eval(String);
+            document.querySelector("input").value=String;
+        }else if(e.target.innerHTML=="c"){
+            String="";
+            document.querySelector("input").value="";
+        }
+        else{
+        String+=e.target.innerHTML;
+        document.querySelector("input").value=String;
+        console.log(e.target.innerHTML);
     }
-}
+    })
+})
+console.log(values);

@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="calculator.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
 </head>
-<body><div class="calucalator">
-    <div class="displayResult"></div>
-    <ul>
-        <li class="1" onclick="validate.fun1()">1</li>
-        <li class="2" onclick="validate.fun2()">2</li>
-        <li class="3"onclick="validate.fun3()">3</li>
-        <li class="4"onclick="validate.fun4()">4</li>
-        <li class="5"onclick="validate.fun5()">5</li>
-        <li class="6">6</li>
-        <li class="7">7</li>
-        <li class="8">8</li>
-        <li class="9">9</li>
-       <!-- <li class=""></li> -->
-    </ul>
+<body>
+    <div class="heading">My calculator</div>
+    <div class="main">
+        <div class="row"><input type="text"></div>
+        <div class="row">
+            <button class="Button">7</button>
+            <button class="Button">8</button>
+            <button class="Button">9</button>
+            <button class="Button">+</button>
+        </div>
+        <div class="row">
+            <button class="Button">4</button>
+            <button class="Button">5</button>
+            <button class="Button">6</button>
+            <button class="Button">-</button>
+        </div>
+        <div class="row">
+            <button class="Button">1</button>
+            <button class="Button">2</button>
+            <button class="Button">3</button>
+            <button class="Button">/</button>
+        </div>
+        <div class="row">
+            <button class="Button">0</button>
+            <button class="Button">c</button>
+            <button class="Button">*</button>
+            <button class="Button">=</button>
+        </div>
     </div>
     <script src="calculator.js"></script>
 </body>

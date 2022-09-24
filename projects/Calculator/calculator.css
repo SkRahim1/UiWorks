@@ -1,29 +1,20 @@
-.calucalator{
-border:1px solid;
-}
-.displayResult{
-    border:2px solid;
-    width:274px;
-    height:20px;
-    margin:auto;
-}
-ul{
-    list-style: none;
-    border:1px solid;
-    padding:0px;
-    margin:auto;
-    width:274px;
-    height:300px;
-    clear:both;
-}
-ul li{
-    border:1px solid;
-    border-radius: 10px;
-    padding:3px ;
-    margin-top: 2px;
+.heading{
     text-align: center;
-    width: 83px;
-    height: 26px;
-    float:left;
-    background-color: blue;
+}
+.main{
+    margin:auto;
+    text-align: center;
+}
+button{
+    padding:10px;
+    width:43px;
+    border:1px solid;
+    border-radius:9px;
+    margin:3px;
+}
+input{
+    padding:4px;
+    margin:2px;
+    width:194px;
+    border-radius:5px;
 }
