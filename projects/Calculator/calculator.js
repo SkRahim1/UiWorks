@@ -12,6 +12,9 @@ values.forEach((button)=>{
         }else if(e.target.innerHTML=="c"){
             String="";
             document.querySelector("input").value="";
+        }else if(e.target.innerHTML=="X"){
+            String=String.substring(0,String.length-1);
+            document.querySelector("input").value=String;
         }
         else{
         String+=e.target.innerHTML;
