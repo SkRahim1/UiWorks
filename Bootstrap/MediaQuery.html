@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+    *{
+        margin:0;
+    }
+    nav{
+        background:rgba(240, 12, 12, 0.745);
+        height:40px;
+        display:flex;
+        padding-top: 10px;
+    }
+    span{
+        margin-left:131px;
+        font-size: 22px;
+       /* display:grid;
+        grid: 150px / auto auto auto; */
+        cursor:pointer;
+    }
+    span:hover{
+        color:blue;
+       
+    }
+    @media screen and (max-width: 300px) and (min-width: 250px)  {
+        #galary{
+            display:none;
+        }
+        nav{
+            background:red;
+        }
+    }
+   </style>
+    <title>Demonstrating mediaQuery</title>
+</head>
+<body>
+    <nav>
+    <span id="home">Home</span>
+    <span id="galary">Galary</span>
+    <span id="courses">Courses</span>
+    <span id="aboutus">AboutUs</span>
+    <span id="contactus">ContactUs</span>
+</nav>
+Hello this is our new webpage
+<audio controls src="https://www.kodyaz.com/html5/html5-audio-example-mp3.mp3"></audio>
+<video controls width="200px" height="200px" src="https://media.w3.org/2010/05/sintel/trailer.mp4"></video>
+</body>
+</html>

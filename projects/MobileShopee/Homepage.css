@@ -1,0 +1,107 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-color: rgb(218, 233, 233);
+}
+
+.logo {
+    position: fixed;
+    width: 83px;
+    height: 27px;
+    top: 0px;
+    z-index: 3;
+}
+
+.Headings {
+    position: sticky;
+    top: 0px;
+    color: rgba(172, 120, 41, 0.918);
+    background-color: rgba(171, 229, 229, 0.734);
+   
+    text-align: center;
+    z-index: 1;
+    height: 53px;
+    padding-top: 13px
+}
+
+.HeadButtons {
+
+    margin: 0px 53px;
+    cursor: pointer;
+}
+
+.HeadButtons:hover {
+    background-color: rgb(171, 229, 229)
+}
+
+h2 {
+    margin-top: 13px;
+  
+    font-family: "Sofia", sans-serif;
+}
+
+.UserInformation {
+    width: 350px;
+    height: 200px;
+    border: 1px solid;
+    margin: 32px auto;
+    background-color: rgb(225, 244, 244);
+    margin-bottom: 400px;
+}
+
+.InputInfo {
+    margin: 10px 20px;
+}
+
+#UserName {
+    margin-right: 35px;
+}
+
+#password {
+    margin-right: 42px;
+}
+
+input {
+    width: 110px;
+}
+
+#LogIn {
+    border: 1px solid;
+    padding: 2px 5px;
+}
+
+#LogIn:hover {
+    background-color: rgb(44, 78, 148);
+    cursor: pointer;
+    /* padding: 2px 5px;
+    border-radius: 5px; */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.SignUp:hover {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.Forgote:hover {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+footer {
+    margin-top:350px;
+    color: blue;
+    font-size: small;
+}
+img{
+    size: 200px !important;
+}
