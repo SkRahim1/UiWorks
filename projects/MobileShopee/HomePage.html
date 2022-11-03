@@ -3,87 +3,190 @@
 
 <head>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="Homepage.css">
-    <title>MobileShopee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="Homepage.css">
+  <title>MobileShopee</title>
 </head>
 
 <body>
-    <img src="logo/MobileShopeeLogo.PNG" alt="" class="logo">
+  <!-- <img src="logo/MobileShopeeLogo.PNG" alt="" class="logo"> -->
 
-    <div class="Headings selector-for-some-widget  ">
-        <span class="HeadButtons">
-            Home
-        </span>
-        <span class="HeadButtons">
-            Galary
-        </span>
-        <span class="HeadButtons">
-            AboutUs
-        </span>
-        <span class="HeadButtons">
-            ContactUs
-        </span>
-        <span class="HeadButtons">
-            Offers
-        </span>
-        <a href="LogInpage.html">
-        <span>
-            LogIn
-        </span>
-    </a>
+  <div class="Headings selector-for-some-widget  ">
+    <span class="HeadButtons">
+      Home
+    </span>
+    <span class="HeadButtons">
+      Galary
+    </span>
+    <span class="HeadButtons">
+      AboutUs
+    </span>
+    <span class="HeadButtons">
+      ContactUs
+    </span>
+    <span class="HeadButtons">
+      Offers
+    </span>
+    <!-- <a href="LogInpage.html"> -->
+    <span class="HeadButtons" onclick="showLogInPage()">
+      LogIn
+    </span>
+    <!-- </a> -->
+  </div>
+
+  <div class="logInPage">
+    <div class="UserInformation" style="position:relative">
+      <span class="cross-red" onclick="cross_red('logInPage');">X</span>
+      <form action="MobilePage.html" method="get">
+        <div class="InputInfo">
+          <label id="UserName" for="UserName">UserName:</label>
+          <input type="email" name="UserName" required>
+          <br>
+          <br>
+          <label id="password" for="UserPassword">Password:</label>
+          <input type="password" name="Password" required>
+          <br>
+          <br>
+          <center>
+            <button id="LogIn">LogIn</button>
+            <!-- <input type="submit"> -->
+          </center>
+          <br>
+
+          <center>
+            <!-- <a href="SignUpPage.html"> -->
+            <span class="SignUp" onclick="showSignUpPage();">SignUp</span>
+            <!-- </a> -->
+          </center>
+          <br>
+          <center>
+            <a href="ForgoteMailId.html">
+              <span class="Forgote">Forgote Password?</span>
+            </a>
+          </center>
+      </form>
     </div>
+  </div>
+  <div class="SignUpPage">
 
-    <center>
-        <h2 class="welcom_message">Welcome to MobileShopee</h2>
-    </center>
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+    <div class="UserInfo">
+      <span class="cross-red" onclick="cross_red('SignUpPage');">X</span>
+      <form action="HomePage.html" method="get">
+
+        <label id="UserName" for="UserName">UserName:</label>
+        <input type="text" name="UserName" required>
+        <br>
+        <br>
+        <label id="password" for="password">Password:</label>
+        <input type="password" name="password" required>
+        <br>
+        <br>
+        <label id="confirmPassword" for="Confirm password">Confirm Password:</label>
+        <input type="password" name="ConfirmPassword" required>
+        <br>
+        <br>
+        <label id="MobileNo" for="MobileNo">MobileNo:</label>
+        <input type="number" name="MobileNo" required>
+        <br>
+        <br>
+        <label id="Email" for="Email">Email:</label>
+        <input type="email" name="Email" required>
+        <br><br>
+        <center>
+          <a href="HomePage.html">
+            <button>SignUp</button>
+          </a>
+        </center>
+      </form>
+    </div>
+  </div>
+
+  <!-- <div class="Scroll_MainDiv">
+    <div class="autoScrollingSlides">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/LenovoMobiles/lenovo3.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
+          <div class="img-max-min carousel-item active">
+            <img
+              src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bW9iaWxlJTIwcGhvbmV8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+              class=" d-block w-100" alt="...">
           </div>
-          <div class="carousel-item">
-            <img src="images/LenovoMobiles/lenovo1.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
+          <div class="img-max-min carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1579983093084-82213ea15691?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bW9iaWxlJTIwcGhvbmV8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+              class="d-block w-100" alt="...">
           </div>
-          <div class="carousel-item">
-            <img src="images/LenovoMobiles/lenovo2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
+          <div class="img-max-min carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+              class="d-block w-100" alt="...">
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-    
-    <footer>
-        @copyright2022 all rights riserved
-    </footer>
-    <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </div>
+  </div> -->
+
+
+  </div>
+  <center>
+    <h2 class="welcom_message">Welcome to MobileShopee</h2>
+  </center>
+  <div class="mainDivBlock">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://img.giznext.com/assets/model/14/13354/lenovo-mobiles-lenovo-z7-1626951236.jpg?width=160"
+            class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Lenovo 5g Lekva</h5>
+            <p>All new features.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/LenovoMobiles/lenovo5.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Lenovo Candila 5g</h5>
+            <p>All new featurs</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/LenovoMobiles/lenovo2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Lenovo Throla 5g</h5>
+            <p>All new features</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <footer>
+    @copyright2022 all rights riserved
+  </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script src="Homepage.js"></script>
 </body>
 
 </html>
