@@ -1,0 +1,19 @@
+*{
+    margin:0px;
+}
+.nav_bar{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    height: 40px;
+    padding: 20px 0px 0px 30px;
+    background-color: #0d6efd;
+}
+.nav_bar div{
+    font-size: larger;
+    font-weight: 300;
+}
+.nav_bar div:hover{
+    color:red;
+    cursor: pointer;
+}
