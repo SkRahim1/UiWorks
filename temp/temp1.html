@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [];
+        var num = prompt("Enter the N(number of elements)");
+        for (i = 0; i < num; i++) {
+            arr[i] = prompt("Enter the value" + (i + 1));
+        }
+       // var p = prompt("Enter P(positon)");
+       // var d = prompt("Enter d(direction)");
+       // for (i = 0; i < arr.length; i++) {
+       //     if (d == 0) {
+       //         console.log(arr[i * p]);
+       //     }
+       // }
+        console.log(arr); 
+
+        for(var i = 0; i < num; i++){    
+            var j, last;    
+            //Stores the last element of array    
+            last = arr[arr.length-1];    
+            
+            for(j = arr.length-1; j > 0; j--){    
+                //Shift element of array by one    
+                arr[j] = arr[j-1];    
+            }    
+            //Last element of array will be added to the start of array.    
+            arr[0] = last;   
+            console.log(arr); 
+        }    
+        console.log(arr);
+    </script>
+</body>
+
+</html>
